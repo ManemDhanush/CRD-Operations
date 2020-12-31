@@ -48,7 +48,7 @@ class CRD:
 
         else:
             if key.isalpha():
-                if len(key) <= 32 and len(self.myDict) < 1024*1024*124:
+                if len(key) <= 32 and len(self.myDict) < 1024*1024*1024 and len(val) <= 16*1024:
                     self.myDict[key] = val
                     self.updateFile()
             if timer != -1:
